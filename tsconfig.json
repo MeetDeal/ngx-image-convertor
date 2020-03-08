@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-image-convertor": [
+        "dist/ngx-image-convertor/ngx-image-convertor",
+        "dist/ngx-image-convertor"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

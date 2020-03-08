@@ -1,0 +1,33 @@
+{
+  "name": "ngx-image-convertor",
+  "version": "0.0.7",
+  "license": "MIT",
+  "description": "Angular library for image management",
+  "author": "Nicolas Ehrenfeld",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MeetDeal/ngx-image-convertor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MeetDeal/ngx-image-convertor/issues"
+  },
+  "keywords": [
+    "angular",
+    "base64",
+    "web",
+    "front-end",
+    "png",
+    "svg",
+    "canvas"
+  ],
+  "scripts": {
+    "build": "ng build --prod",
+    "publish": "npm publish"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.0.3",
+    "@angular/core": "^9.0.3",
+    "tslib": "^1.10.0"
+  }
+}
