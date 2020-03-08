@@ -1,27 +1,34 @@
 # NgxImageConvertor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
 
-## Development server
+## JavaScript VS Image, and why NgxImageConvertor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This library exists because the management of images, `<canvas>`, `<svg>` and base64 is not optimal with javascript or angular.
+<br>
+With this library **Angular** you can manage your `<img>` tags, image conversion to base64, canvas conversion to base64, svg tag conversion to base64
+> **Note:** This library is in development, it is not yet finished
 
-## Code scaffolding
+## How to use
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add import **`NgxImageConvertorService`** to top your ``component.ts``:
+```angular2
+    import {NgxImageConvertorService} from "ngx-image-convertor";
+```
 
-## Build
+Inject **`NgxImageConvertorService`** to the constructor of your ``component.ts``:
+```angular2
+    constructor(private imageConvertorService: NgxImageConvertorService) {}
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Method List 
 
-## Running unit tests
+##### ConvertSvgByIdToBase64
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+````
+    this.imageConvertorService.convertSvgByIdToBase64( id_of_your_SVG_tag: string, width_of_base64_ouput: number, height_of_base64_ouput: number, output_format: string,
+         (base64) => {
+              console.log(base64);
+         }
+    );
+````
